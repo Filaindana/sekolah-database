@@ -44,3 +44,13 @@ WHERE nama = 'Citra';
 DELETE FROM nilai
 WHERE siswa_id = 2 AND mata_pelajaran = 'Bahasa Inggris';
 SELECT * FROM nilai;
+INSERT INTO siswa (nama, umur, jurusan)
+VALUES
+('Fajar', 17, 'IPA'),
+('Gita', 16, 'IPS');
+INSERT INTO nilai (siswa_id, mata_pelajaran, nilai)
+VALUES
+(6, 'Matematika', 89),
+(6, 'Bahasa Inggris', 91),
+(7, 'Matematika', 84),
+(7, 'Bahasa Inggris', 86);
