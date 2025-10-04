@@ -54,3 +54,18 @@ VALUES
 (6, 'Bahasa Inggris', 91),
 (7, 'Matematika', 84),
 (7, 'Bahasa Inggris', 86);
+SELECT * FROM siswa;
+SELECT nama, umur, jurusan
+FROM siswa
+WHERE jurusan = 'IPA';
+SELECT siswa.nama, AVG(nilai.nilai) AS rata_rata_nilai
+FROM siswa
+JOIN nilai ON siswa.id = nilai.siswa_id
+GROUP BY siswa.nama
+ORDER BY siswa.nama;
+UPDATE siswa
+SET jurusan = 'IPS'
+WHERE nama = 'Citra';
+DELETE FROM nilai
+WHERE siswa_id = 2 AND mata_pelajaran = 'Bahasa Inggris';
+SELECT * FROM nilai;
